@@ -47,27 +47,8 @@ namespace calling_card
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            // app.UseStaticFiles();
-            // app.UseMvc();
-            app.UseMvc(routes => 
-            {
-                routes.MapRoute(
-                    name: "Default",
-                    template: "",
-                    defaults: new {controller = "Card", action = "Index"}
-                );
-            });
-            // app.UseMvc(routes =>
-            // {
-            //     routes.MapRoute(
-            //         name: "default",
-            //         template: "{controller=Home}/{action=Index}/{id?}");
-            // });
-            // app.Run(async (context) =>
-            // {
-            //     await context.Response.WriteAsync("Hello, Dotnet!");
-            // });
+            
+            app.UseMvc();
         }
     }
 }
